@@ -1,0 +1,122 @@
+#=============================================================================
+# basic.toml --- basic configuration example for SpaceVim
+# Copyright (c) 2016-2022 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg@outlook.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    # set spacevim theme. by default colorscheme layer is not loaded,
+    # if you want to use more colorscheme, please load the colorscheme
+    # layer
+    colorscheme = "gruvbox"
+    colorscheme_bg = "dark"
+    # Disable guicolors in basic mode, many terminal do not support 24bit
+    # true colors
+    enable_guicolors = false
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+    statusline_separator = "nil"
+    statusline_iseparator = "bar"
+    buffer_index_type = 4
+    windows_index_type = 3
+    enable_tabline_filetype_icon = false
+    enable_statusline_mode = false
+    statusline_unicode = false
+    # Enable vim compatible mode, avoid changing origin vim key bindings
+    vimcompatible = true
+    relativenumber = false
+    bootstrap_after = "myconfig#after"
+    bootstrap_before = "myconfig#before"
+
+# Enable autocomplete layer
+[[layers]]
+    name = 'autocomplete'
+    auto_completion_return_key_behavior = "complete"
+    auto_completion_tab_key_behavior = "cycle"
+
+[[layers]]
+    name = 'core'
+    enable_smooth_scrolling = false
+
+[[layers]]
+    name = 'shell'
+    default_position = 'top'
+    default_height = 30
+
+[[layers]]
+    name = "fzf"
+
+[[layers]]
+    name = "core#tabline"
+    enable = false
+
+[[layers]]
+    name = "checkers"
+    lint_on_save = false
+
+#=============================================================================
+# My Custom Plugins
+#=============================================================================
+#[[custom_plugins]]
+#    repo = "https://github.com/vim-airline/vim-airline"
+#    merged = 0
+#[[custom_plugins]]
+#    repo = "https://github.com/vim-airline/vim-airline-themes"
+#    merged = 0
+[[custom_plugins]]
+    repo = "https://github.com/frazrepo/vim-rainbow"
+    merged = 0
+[[custom_plugins]]
+    repo = "https://github.com/evturn/cosmic-barf"
+    merged = 0
+[[custom_plugins]]
+    repo = "https://github.com/liuchengxu/space-vim-dark"
+    merged = 0
+[[custom_plugins]]
+    repo = "https://github.com/dbeniamine/cheat.sh-vim"
+    merged = 0
+[[custom_plugins]]
+    repo = "https://github.com/justinmk/vim-sneak"
+    merged = 0
+[[custom_plugins]]
+    repo = "https://github.com/tpope/vim-fugitive"
+    merged = 0
+[[custom_plugins]]
+  repo = "https://github.com/vifm/vifm.vim"
+  merged = 0
+[[custom_plugins]]
+  repo = "https://github.com/airblade/vim-gitgutter"
+  merged = 0
+[[custom_plugins]]
+  repo = "https://github.com/ojroques/vim-scrollstatus"
+  merged = 0
+[[custom_plugins]]
+  repo = "https://github.com/pR0Ps/molokai-dark"
+  merged = 0
+[[custom_plugins]]
+  repo = "https://github.com/airblade/vim-rooter"
+  merged = 0
+[[custom_plugins]]
+  repo = "https://github.com/junegunn/fzf.vim"
+  merged = 0
+[[custom_plugins]]
+  repo = "https://github.com/junegunn/fzf"
+  merged = 0
+[[custom_plugins]]
+  repo = "https://github.com/Brettm12345/moonlight.vim"
+  merged = 0
+[[custom_plugins]]
+  repo = "https://github.com/coreyja/fzf.devicon.vim"
+  merged = 0
+[[custom_plugins]]
+  repo = "https://github.com/ryanoasis/vim-devicons"
+  merged = 0
+[[custom_plugins]]
+  repo = "https://github.com/dracula/vim"
+  merged = 0
+[[custom_plugins]]
+  repo = "https://github.com/francoiscabrol/ranger.vim"
+  merged = 0

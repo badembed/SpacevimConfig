@@ -99,11 +99,11 @@ function! SpaceVim#layers#fuzzy#config() abort
         \ 1)
 
   let lnum = expand('<slnum>') + s:lnum - 1
-  call SpaceVim#mapping#space#def('nnoremap', ['f', 'f'],
+  call SpaceVim#mapping#space#def('nnoremap', ['f', 's'],
         \ "exe 'CtrlP ' . fnamemodify(bufname('%'), ':h')",
         \ ['find-files-in-buffer-directory',
         \ [
-        \ '[SPC f f] is to find files in the directory of the current buffer',
+        \ '[SPC f s] is to find files in the directory of the current buffer',
         \ '',
         \ 'Definition: ' . s:filename . ':' . lnum,
         \ ]

@@ -158,15 +158,15 @@ function! SpaceVim#layers#core#config() abort
   nnoremap <silent> ]p p
 
   let lnum = expand('<slnum>') + s:lnum - 1
-  call SpaceVim#mapping#space#def('nnoremap', ['f', 's'], 'call call('
-        \ . string(s:_function('s:save_current_file')) . ', [])',
-        \ ['save-current-file',
-        \  ['[SPC f s] is to save current file',
-        \   '',
-        \   'Definition: ' . s:filename . ':' . lnum,
-        \  ]
-        \ ]
-        \ , 1)
+"  call SpaceVim#mapping#space#def('nnoremap', ['f', 's'], 'call call('
+"        \ . string(s:_function('s:save_current_file')) . ', [])',
+"        \ ['save-current-file',
+"        \  ['[SPC f s] is to save current file',
+"        \   '',
+"        \   'Definition: ' . s:filename . ':' . lnum,
+"        \  ]
+"        \ ]
+"        \ , 1)
   call SpaceVim#mapping#space#def('nnoremap', ['f', 'R'], 'call call('
         \ . string(s:_function('s:rename_current_file')) . ', [])',
         \ 'rename_current_file', 1)
@@ -304,23 +304,23 @@ function! SpaceVim#layers#core#config() abort
   if g:spacevim_filemanager ==# 'vimfiler'
     call SpaceVim#mapping#space#def('nnoremap', ['f', 't'], 'VimFiler | doautocmd WinEnter', 'toggle-file-tree', 1)
     call SpaceVim#mapping#space#def('nnoremap', ['f', 'T'], 'VimFiler -no-toggle | doautocmd WinEnter', 'open-file-tree', 1)
-    call SpaceVim#mapping#space#def('nnoremap', ['f', 'o'], 'VimFiler -find', 'find-file-in-file-tree', 1)
+    call SpaceVim#mapping#space#def('nnoremap', ['f', 's'], 'VimFiler -find', 'find-file-in-file-tree', 1)
     call SpaceVim#mapping#space#def('nnoremap', ['b', 't'], 'VimFilerBufferDir -no-toggle', 'open-filetree-in-buffer-dir', 1)
   elseif g:spacevim_filemanager ==# 'nerdtree'
     call SpaceVim#mapping#space#def('nnoremap', ['f', 't'], 'NERDTreeToggle', 'toggle-file-tree', 1)
     call SpaceVim#mapping#space#def('nnoremap', ['f', 'T'], 'NERDTree', 'show-file-tree', 1)
-    call SpaceVim#mapping#space#def('nnoremap', ['f', 'o'], 'NERDTreeFind', 'open-file-tree', 1)
+    call SpaceVim#mapping#space#def('nnoremap', ['f', 'f'], 'NERDTreeFind', 'open-file-tree', 1)
     call SpaceVim#mapping#space#def('nnoremap', ['b', 't'], 'NERDTree %', 'show-file-tree-at-buffer-dir', 1)
   elseif g:spacevim_filemanager ==# 'defx'
     " TODO: fix all these command
     call SpaceVim#mapping#space#def('nnoremap', ['f', 't'], 'Defx', 'toggle-file-tree', 1)
     call SpaceVim#mapping#space#def('nnoremap', ['f', 'T'], 'Defx -no-toggle', 'show-file-tree', 1)
-    call SpaceVim#mapping#space#def('nnoremap', ['f', 'o'], "Defx  -no-toggle -search=`expand('%:p')` `stridx(expand('%:p'), getcwd()) < 0? expand('%:p:h'): getcwd()`", 'open-file-tree', 1)
+    call SpaceVim#mapping#space#def('nnoremap', ['f', 'f'], "Defx  -no-toggle -search=`expand('%:p')` `stridx(expand('%:p'), getcwd()) < 0? expand('%:p:h'): getcwd()`", 'open-file-tree', 1)
     call SpaceVim#mapping#space#def('nnoremap', ['b', 't'], 'exe "Defx -no-toggle " . fnameescape(expand("%:p:h"))', 'show-file-tree-at-buffer-dir', 1)
   elseif g:spacevim_filemanager ==# 'nvim-tree'
     call SpaceVim#mapping#space#def('nnoremap', ['f', 't'], 'NvimTreeToggle', 'toggle-file-tree', 1)
     call SpaceVim#mapping#space#def('nnoremap', ['f', 'T'], 'NvimTree', 'show-file-tree', 1)
-    call SpaceVim#mapping#space#def('nnoremap', ['f', 'o'], "NvimTreeFindFile", 'open-file-tree', 1)
+    call SpaceVim#mapping#space#def('nnoremap', ['f', 'f'], "NvimTreeFindFile", 'open-file-tree', 1)
     call SpaceVim#mapping#space#def('nnoremap', ['b', 't'], 'exe "NvimTreeOpen " . fnameescape(expand("%:p:h"))', 'show-file-tree-at-buffer-dir', 1)
   endif
   call SpaceVim#mapping#space#def('nnoremap', ['f', 'y'], 'call SpaceVim#util#CopyToClipboard()', 'show-and-copy-buffer-filename', 1)

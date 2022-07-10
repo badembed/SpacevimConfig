@@ -196,10 +196,10 @@ function! SpaceVim#default#keyBindings() abort
         \ 'Clear quickfix')
 
   " Use Ctrl+* to jump between windows
-  nnoremap <silent><C-Right> :<C-u>wincmd l<CR>
-  nnoremap <silent><C-Left>  :<C-u>wincmd h<CR>
-  nnoremap <silent><C-Up>    :<C-u>wincmd k<CR>
-  nnoremap <silent><C-Down>  :<C-u>wincmd j<CR>
+  nnoremap <silent><C-S-Right> :<C-u>wincmd l<CR>
+  nnoremap <silent><C-S-Left>  :<C-u>wincmd h<CR>
+  nnoremap <silent><C-S-Up>    :<C-u>wincmd k<CR>
+  nnoremap <silent><C-S-Down>  :<C-u>wincmd j<CR>
 
 
   "]<End> or ]<Home> move current line to the end or the begin of current buffer
@@ -210,12 +210,12 @@ function! SpaceVim#default#keyBindings() abort
 
 
   "Ctrl+Shift+Up/Down to move up and down
-  nnoremap <silent><C-S-Down> :m .+1<CR>==
-  nnoremap <silent><C-S-Up> :m .-2<CR>==
-  inoremap <silent><C-S-Down> <Esc>:m .+1<CR>==gi
-  inoremap <silent><C-S-Up> <Esc>:m .-2<CR>==gi
-  vnoremap <silent><C-S-Down> :m '>+1<CR>gv=gv
-  vnoremap <silent><C-S-Up> :m '<-2<CR>gv=gv
+  "nnoremap <silent><C-S-Down> :m .+1<CR>==
+  "nnoremap <silent><C-S-Up> :m .-2<CR>==
+  "inoremap <silent><C-S-Down> <Esc>:m .+1<CR>==gi
+  "inoremap <silent><C-S-Up> <Esc>:m .-2<CR>==gi
+  "vnoremap <silent><C-S-Down> :m '>+1<CR>gv=gv
+  "vnoremap <silent><C-S-Up> :m '<-2<CR>gv=gv
 
   " Start new line
   inoremap <S-Return> <C-o>o

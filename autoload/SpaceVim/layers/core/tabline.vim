@@ -518,8 +518,8 @@ function! SpaceVim#layers#core#tabline#config() abort
   augroup END
 
   if s:enable_default_mappings
-    nnoremap <silent> <C-S-Left> :call <SID>move_tabpage(-1)<CR>
-    nnoremap <silent> <C-S-Right> :call <SID>move_tabpage(1)<CR>
+    nnoremap <silent> <C-Left> :call <SID>move_tabpage(-1)<CR>
+    nnoremap <silent> <C-Right> :call <SID>move_tabpage(1)<CR>
   endif
 
   let shift_keys = {

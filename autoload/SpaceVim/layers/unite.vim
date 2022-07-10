@@ -120,11 +120,11 @@ function! SpaceVim#layers#unite#config() abort
   let g:_spacevim_mappings.f = {'name' : '+Fuzzy Finder'}
   call s:defind_fuzzy_finder()
   let lnum = expand('<slnum>') + s:lnum - 1
-  call SpaceVim#mapping#space#def('nnoremap', ['f', 'f'],
+  call SpaceVim#mapping#space#def('nnoremap', ['f', 's'],
         \ 'UniteWithBufferDir file_rec/' . (has('nvim') ? 'neovim' : 'async'),
         \ ['Find files in the directory of the current buffer',
         \ [
-        \ '[SPC f f] is to find files in the directory of the current buffer',
+        \ '[SPC f s] is to find files in the directory of the current buffer',
         \ '',
         \ 'Definition: ' . s:filename . ':' . lnum,
         \ ]

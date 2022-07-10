@@ -50,7 +50,7 @@ let g:startify_skiplist = [
       \ ]
 augroup startify_map
   au!
-  autocmd FileType startify nnoremap <buffer> <F2> <Nop>
+  autocmd FileType startify nnoremap <buffer> <F1> <Nop>
   if !exists('g:startify_custom_header')
     autocmd FileType startify call <SID>update_logo()
   endif

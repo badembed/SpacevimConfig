@@ -162,9 +162,9 @@ function! SpaceVim#layers#ui#config() abort
   let g:cursorword_delay = s:cursorword_delay
 
   if s:enable_sidebar
-    noremap <silent> <F2> :call SpaceVim#plugins#sidebar#toggle()<CR>
+    noremap <silent> <F1> :call SpaceVim#plugins#sidebar#toggle()<CR>
   else
-    noremap <silent> <F2> :TagbarToggle<CR>
+    noremap <silent> <F1> :TagbarToggle<CR>
   endif
 
   " this options only support neovim now.
